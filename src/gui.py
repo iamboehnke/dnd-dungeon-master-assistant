@@ -399,7 +399,7 @@ class DnDApp:
                 use_ai_traits=self.use_ai_traits.get()
             )
             text = self.format_npc(npc)
-            text += f"{text}\n{'-'*50}\n"
+            text += f"\n{'-'*50}\n"
         else:
             npcs = generate_multiple_npcs(
                 count=count,
@@ -505,7 +505,12 @@ class DnDApp:
         recurse(self.root)
 
     def format_npc(self, npc):
-        return f"Name: {npc['name']}\nRace: {npc['race']}\nTrait: {npc['trait']}\n"
+        return (
+        f"Name : {npc['name']}\n"
+        f"Race : {npc['race']}\n"
+        f"Class: {npc['class']}\n"
+        f"Trait: {npc['trait']}\n"
+        )
 
     def log_training(self, message):
         timestamp = datetime.datetime.now().strftime("%H:%M:%S")

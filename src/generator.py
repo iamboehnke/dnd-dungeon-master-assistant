@@ -273,6 +273,13 @@ def load_and_train_model():
 name_generator = load_and_train_model()
 trait_generator = TraitGenerator(use_gpt2=True)  # Enable GPT-2 by default
 
+def toggle_ai_traits(self):
+    enabled = self.use_ai_traits.get()
+    # rebuild the generator with or without GPT-2
+    global trait_generator
+    trait_generator = TraitGenerator(use_gpt2=enabled)
+    self.update_ai_status()
+
 # Get unique races for random assignment
 races = npc_names_df['race'].unique().tolist()
 
@@ -308,6 +315,12 @@ def generate_npc(use_markov=True, race_specific=True, starting_letters="",
         name = npc["name"]
         race = npc["race"]
     
+    class_candidates = npc_names_df[npc_names_df['race'] == race]['class'].dropna().tolist()
+    if class_candidates:
+        npc_class = random.choice(class_candidates)
+    else:
+        npc_class = random.choice(npc_names_df['class'].dropna().unique().tolist())
+    
     # Generate trait with AI
     trait = trait_generator.generate_trait(
         race=race, 
@@ -318,6 +331,7 @@ def generate_npc(use_markov=True, race_specific=True, starting_letters="",
     return {
         "name": name,
         "race": race,
+        "class": npc_class,
         "trait": trait
     }
 
@@ -356,10 +370,15 @@ def add_names_to_model(names, race=None):
     return f"Added {len(names)} names to model!"
 
 def get_available_races():
-    """Get list of all available races"""
+    """Get list of all available races, filtering out invalid entries."""
     trained_races = name_generator.get_trained_races()
     all_races = set(races + trained_races)
-    return sorted(list(all_races))
+
+    # Filter out non-strings or empty strings
+    cleaned = [race for race in all_races 
+               if isinstance(race, str) and race.strip()]
+
+    return sorted(cleaned)
 
 def get_model_stats():
     """Get statistics about the trained model"""
