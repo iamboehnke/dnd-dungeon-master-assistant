@@ -1,0 +1,19 @@
+{
+    "low_level": [
+        {"name": "Bandit Ambush", "monsters": ["2 Bandits", "1 Wolf"], "difficulty": "Easy"},
+        {"name": "Goblin Scouts", "monsters": ["3 Goblins"], "difficulty": "Easy"},
+        {"name": "Forest Spiders", "monsters": ["2 Giant Spiders"], "difficulty": "Easy"},
+        {"name": "Skeleton Patrol", "monsters": ["3 Skeletons"], "difficulty": "Easy"}
+    ],
+    "mid_level": [
+        {"name": "Ogre Trouble", "monsters": ["1 Ogre", "2 Wolves"], "difficulty": "Medium"},
+        {"name": "Cult Ritual", "monsters": ["4 Cultists", "1 Shadow"], "difficulty": "Medium"},
+        {"name": "Gnoll Raiders", "monsters": ["2 Gnolls", "1 Hyena"], "difficulty": "Medium"},
+        {"name": "Troll Bridge", "monsters": ["1 Troll"], "difficulty": "Medium"}
+    ],
+    "high_level": [
+        {"name": "Dragon Sighted", "monsters": ["1 Young Red Dragon"], "difficulty": "Hard"},
+        {"name": "Lich's Minions", "monsters": ["1 Wight", "2 Zombies"], "difficulty": "Hard"},
+        {"name": "Giant's Rampage", "monsters": ["1 Hill Giant"], "difficulty": "Hard"}
+    ]
+}
