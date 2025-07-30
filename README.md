@@ -29,41 +29,40 @@ A desktop app to help Dungeon Masters quickly generate NPCs, balanced encounters
 
 ---
 
-## 📂 Repository Structure
-
+## Repository Structure
+```
 dnd-dungeon-master-assistant/
 │
 ├─ data/
-│ └─ npc_names.csv # Name – race pairs for Markov training
+│ └─ npc_names.csv        #Name – race pairs for Markov training
 │
 ├─ src/
-│ └─ app.py # Tkinter GUI entrypoint
-│ └─ generator.py # Core logic: NPC, encounters, training
-│ └─ markov_model.py # Name generator
-│ └─ trait_generator.py # AI trait logic
+│ └─ app.py               #Tkinter GUI entrypoint
+│ └─ generator.py         #Core logic: NPC, encounters, training
+│ └─ markov_model.py      #Name generator
+│ └─ trait_generator.py   #AI trait logic
 │
-├─ launcher.py # (optional) builds .exe or wraps another UI
-├─ requirements.txt # Python dependencies
-├─ launcher.spec # PyInstaller spec for .exe bundling
+├─ launcher.py            #(optional) builds .exe or wraps another UI
+├─ requirements.txt       #Python dependencies
+├─ launcher.spec          #PyInstaller spec for .exe bundling
 └─ README.md
-
+```
 
 ---
 
 ## Installation & Run from Source
 
 1. **Clone the repo**  
-   git clone https://github.com/YOUR_USERNAME/dnd-dungeon-master-assistant.git
-   cd dnd-dungeon-master-assistant
+  git clone https://github.com/YOUR_USERNAME/dnd-dungeon-master-assistant.git
+  cd dnd-dungeon-master-assistant
 
 2. **Create & activate a virtualenv (or Conda env):**
-    python -m venv .venv
-    .venv\Scripts\activate     # Windows PowerShell
-    # or: source .venv/bin/activate  # macOS/Linux
+  python -m venv .venv
+  .venv\Scripts\activate #Windows PowerShell or macOS/Linux: source .venv/bin/activate 
 
-3. **Install dependencies**
-    pip install -r requirements.txt
+4. **Install dependencies**
+  pip install -r requirements.txt
 
-4. **Run the app**
-    python src/app.py
+5. **Run the app**
+  python src/app.py
 
