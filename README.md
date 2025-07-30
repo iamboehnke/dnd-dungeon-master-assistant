@@ -10,7 +10,8 @@ A desktop app to help Dungeon Masters quickly generate NPCs, balanced encounters
 - **NPC Generator**  
   - Toggle between Markov‑chain names or custom lists  
   - Race‑specific or random  
-  - AI‑generated personality traits (via mini GPT‑2)  
+  - AI‑generated personality traits (via mini GPT‑2)
+  - Gives a class to build on
   - Bulk name & trait training
 
 - **Encounter Builder**  
@@ -28,6 +29,11 @@ A desktop app to help Dungeon Masters quickly generate NPCs, balanced encounters
   - View total names trained, races supported, trait counts, etc.
 
 ---
+
+<img width="995" height="906" alt="Screenshot 2025-07-30 093129" src="https://github.com/user-attachments/assets/80eb3a7b-8a92-4c85-ae1a-e86f74745519" />
+<img width="940" height="852" alt="Screenshot 2025-07-30 093708" src="https://github.com/user-attachments/assets/1974b88d-0e61-4810-b4d1-abc6acd62313" />
+<img width="940" height="852" alt="Screenshot 2025-07-30 093628" src="https://github.com/user-attachments/assets/34a61097-bafd-45b3-b62e-fca6e2685c08" />
+
 
 ## Repository Structure
 ```
